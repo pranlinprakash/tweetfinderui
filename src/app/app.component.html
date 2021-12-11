@@ -1,0 +1,42 @@
+<style>
+  
+
+
+  
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span>&nbsp; Welcome</span>
+    <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card card-small">
+
+    <span>{{ title }} app is running!</span>
+
+  </div>
+
+  <!-- Resources -->
+  <h2>Search your keyword here</h2>
+  <div class="card-container">
+    <input id="keyword" type="text" [formControl]="keyword">
+    <button (click)="keywordFinder()">Find</button>
+  </div>
+
+  <div class="card-container">
+    {{keyword.value}}
+  </div>
+  <div class="card-container">
+    Hello..!!!!!!!!
+  </div>
+  <!-- Footer -->
+  <footer>
+      &copy; Pranlin Prakash K
+  </footer>
+</div>
+
+<router-outlet></router-outlet>
