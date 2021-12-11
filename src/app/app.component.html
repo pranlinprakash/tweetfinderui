@@ -28,10 +28,16 @@
   </div>
 
   <div class="card-container">
-    {{keyword.value}}
+    <ul>
+      <li *ngFor="let tweet of map | keyvalue | slice:0:currentLimit">
+        <h4>{{tweet.value.user.name}}</h4>
+        <p>{{tweet.value.text}}</p>
+        <button style="width:50%;" *ngIf="loadMore == true && tweet.key == currentLimit" (click)="loadMoreTweets()">Load More</button>
+      </li>
+    </ul>
   </div>
-  <div class="card-container">
-    Hello..!!!!!!!!
+  <div *ngIf="loader == true" class="card-container">
+    loading...
   </div>
   <!-- Footer -->
   <footer>

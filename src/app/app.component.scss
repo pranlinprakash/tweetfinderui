@@ -163,6 +163,7 @@
   }
 
   button {
+    cursor: pointer;
     width:100%;
     background-color: #125699;
     border-style: solid;
@@ -172,4 +173,30 @@
     border-right-width: 1px;
     margin-left: 2ch;
     color: #eee;
+  }
+
+// --------------------------------
+
+  ul {
+    list-style-type: none;
+    width: 500px;
+  }
+     
+  li img {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+   
+  li p {
+    font: 200 12px/1.5 Georgia, Times New Roman, serif;
+  }
+   
+  li {
+    padding: 10px;
+    overflow: auto;
+  }
+   
+  li:hover {
+    background: #eee;
+    cursor: pointer;
   }
