@@ -7,8 +7,9 @@
 
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
-  <span>&nbsp; Welcome</span>
+  <span>&nbsp;&nbsp; Tweetfinder</span>
     <div class="spacer"></div>
+  <span *ngIf="newTweets > 0" style="color: red;">{{newTweets}} new tweets &nbsp;&nbsp;</span>
 </div>
 
 <div class="content" role="main">

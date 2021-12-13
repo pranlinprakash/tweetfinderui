@@ -14,9 +14,10 @@ export class AppComponent {
   keyword = new FormControl('');
   loader=false
   map = new Map()
-  limit=5
+  limit=25
   currentLimit=0;
   loadMore=false;
+  newTweets=0
   constructor(private http: HttpClient) { }
   ngOnInit() {
     let count=0
@@ -29,6 +30,11 @@ export class AppComponent {
       }
       if (param.status == 200) {
         this.map.set(count,param.data);
+        if (this.map.size > this.currentLimit) {
+          this.newTweets = this.map.size - this.currentLimit
+        }else{
+          this.newTweets = 0
+        }
       }
       this.loader =false;
     });
